@@ -1,11 +1,16 @@
-<h3>
-    List of users 
-</h3>
+<h2>
+    List of Users 
+</h2>
 
-<div *ngIf="!users || users.length === 0">
-    There are no users saved till now
-</div>
+<div class="card">
 
-<div class="row" *ngFor="let user of users">
-    {{user | json}}
+  <div class="card-body">
+    <div *ngIf="!users || users.length === 0">
+      There are no users saved till now
+    </div>
+
+    <div class="row" *ngFor="let user of users">
+      {{ user | json }}
+    </div>
+  </div>
 </div>
