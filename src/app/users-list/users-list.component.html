@@ -1,0 +1,11 @@
+<h3>
+    List of users 
+</h3>
+
+<div *ngIf="!users || users.length === 0">
+    There are no users saved till now
+</div>
+
+<div class="row" *ngFor="let user of users">
+    {{user | json}}
+</div>
